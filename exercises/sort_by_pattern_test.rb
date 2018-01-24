@@ -23,12 +23,12 @@ class SortByPatternTest < Minitest::Test
     transformed = []
     things.each do |thing|
       transformed << [thing[-1], thing]
-      # what is this line saying exactly?
+      # makes a 2d array where the first item is the sort_key and the second item is the element
     end
     transformed = transformed.sort
     sorted = []
     transformed.each do |sort_key, thing|
-      # what is the sort_key? and where is it coming from?
+      # sort_key is thing[-1]
       sorted << thing
     end
     assert_equal ["sponge", "pill", "water", "glass", "box"], sorted
